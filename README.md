@@ -1,32 +1,64 @@
-# 🍽️ Restaurant Menu Website
+# 🍽️ Little Lemon - Restaurant Menu API
 
-This is a backend project developed as part of the **Meta-Backend Developer Certificate Program**. The project provides a RESTful API for a restaurant website that allows users to view menu items. It is built using **Django** and **Django REST Framework (DRF)**, with authentication implemented for secure access to protected endpoints.
+This backend project is developed as part of the **Meta Back-End Developer Certificate Program**. It provides a **RESTful API** for managing and viewing restaurant menu items and booking tables. The project uses **Django**, **Django REST Framework**, and **Djoser** for user authentication.
 
 ---
 
 ## 📌 Features
 
-- ✅ Django-based backend architecture
+- ✅ **Django-based** backend architecture
 - ✅ REST API endpoints for:
-  - Viewing menu items
-  - User authentication (login/logout/token)
-- ✅ Authentication using **Django REST Framework Token Auth**
-- ✅ Admin panel to manage menu items
-- ✅ Clean and modular project structure
+  - Viewing and managing menu items
+  - Booking table reservations
+  - User authentication (login/logout/token management)
+- ✅ **Authentication** using **Djoser + DRF Token Authentication**
+- ✅ **Admin panel** for managing menu and bookings
+- ✅ Modular, scalable, and clean project structure
+- ✅ **Unit & view tests** for model and endpoint validation
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Language**: Python 3.x
-- **Framework**: Django
-- **API Framework**: Django REST Framework
-- **Authentication**: DRF Token Authentication
-- **Database**: SQLite (default, can be replaced with PostgreSQL or others)
-- **Frontend**: Not included (backend-only project)
+| Tech           | Usage                         |
+|----------------|-------------------------------|
+| Python 3.x     | Programming Language          |
+| Django         | Web framework                 |
+| Django REST Framework | API development        |
+| Djoser         | Authentication token management |
+| Mysql         | Default database (can be swapped) |
+| Insomnia        | API testing (optional)        |
+| VS Code        | Development Environment       |
 
 ---
 
-## 📁 Project Structure
+## 🧩 Project Structure
 
-
+```bash
+LittleLemon/
+│
+├── littlelemon/             # Project package
+│   └── settings.py
+│   └── urls.py
+│   └── ...
+│
+├── restaurant/              # App package
+│   ├── models.py            # Menu and Booking models
+│   ├── views.py             # API views
+│   ├── serializers.py       # DRF serializers
+│   ├── urls.py              # App-level routing
+│   └── tests/               # Test folder for models and views
+│       ├── test_models.py
+│       └── test_views.py
+│
+├── templates/               # HTML templates
+│   └── index.html
+│
+├── static/                  # Static assets
+│   └── restaurant/
+│       └── img/
+│           └── logo.png
+│           └── grill.jpg
+│           └── ...
+│
+└── manage.py
